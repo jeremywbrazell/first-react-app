@@ -4,17 +4,18 @@ import './style.css';
 import Data from './beastData.json';
 
 class Main extends React.Component {
-    
+
     render() {
         return (
             <div>
                 <ul>
                     {Data.map((item) =>{
                         return (
-                        <>
-                        <li keyword={item.title}>{item.image_url}
-                        {item.description}</li>
-                        < />
+                        <HornedBeast
+                        title={item.title}
+                        image={item.image_url}
+                        description={item.description}
+                        />
                     )
                     })
                 }
@@ -22,8 +23,8 @@ class Main extends React.Component {
             </div>
         )
 
-
     }
+   
 }
 
 

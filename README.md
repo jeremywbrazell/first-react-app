@@ -9,9 +9,9 @@ Estimate of time needed to complete: 30 mins
 
 Start time: 2:00 PM PST
 
-Finish time: _____
+Finish time: 4:15 PM PST
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hours, 15 minutes.
 
 --------------------------------------------------
 
@@ -19,11 +19,11 @@ Number and name of feature: #2 - Allow users to vote for their favorite beast
 
 Estimate of time needed to complete: 30 mins
 
-Start time: _____
+Start time: 4:30 PM PST
 
-Finish time: _____
+Finish time: 5:20 PM PST
 
-Actual time needed to complete: _____
+Actual time needed to complete: 50 minutes
 
 ---------------------------------------------------
 
@@ -31,7 +31,7 @@ Number and name of feature: #3 - Bootstrap
 
 Estimate of time needed to complete: 30 mins
 
-Start time: _____
+Start time: 6:00 PM PST
 
 Finish time: _____
 

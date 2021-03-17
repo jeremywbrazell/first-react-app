@@ -17,21 +17,19 @@ class HornedBeast extends React.Component {
         return(
             <div className="Horned Beasts">
             <Card style={{ width: '18rem' }}>
-                <Card.Img src={this.props.image} alt = {this.props.title} onClick = {this.numberOfClicks}/>
+                <Card.Img 
+                    src={this.props.image} 
+                    alt = {this.props.title} 
+                    onClick = {this.numberOfClicks}
+                    />
                 <Card.Body>
                     <Card.Title>{this.props.title} ❤️  = {this.state.numberOfClicks}</Card.Title>
-                    <Card.Text>{this.props.description}</Card.Text>
+                    <Card.Text>{this.props.description}<Card.Text>
                 </Card.Body>
             </Card>
             </div>
 
-        //     <div id='Horned Beast'>
-        //     <h2>{this.props.title}</h2>
-        //     <img onClick = {this.numberOfClicks} alt = {this.props.title} src={this.props.image}>
-        //     </img>
-        //     <p>{this.props.description}</p>
-            
-        //     </div>
+       
         )
         
     }

@@ -33,6 +33,6 @@ Estimate of time needed to complete: 30 mins
 
 Start time: 6:00 PM PST
 
-Finish time: _____
+Finish time: 7:00 PM PST
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 Hour

@@ -13,10 +13,9 @@ class HornedBeast extends React.Component {
     }
     numberOfClicks = () => {
         this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
-    }
-
-    popOut = () => {
+        console.log(this.props.index);
         this.props.showModal(this.props.index);
+       
     }
 
     render() {
@@ -24,10 +23,9 @@ class HornedBeast extends React.Component {
             <div className="Horned Beasts">
                 <Card style={{ width: '18rem' }}>
                     <Card.Img
-                        onClick={this.popOut}
+                        onClick={this.numberOfClicks}
                         src={this.props.image}
                         alt={this.props.title}
-                        onClick={this.numberOfClicks}
                     />
                     <Card.Body>
                         <Card.Title>{this.props.title} ❤️  = {this.state.numberOfClicks}</Card.Title>

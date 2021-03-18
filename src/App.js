@@ -11,13 +11,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       rawData: Data,
+      indexofSelectedBeast: -1,
       displayModal: false,
       favoriteBeast: {}
     }
   }
 
   showModal = (index) => {
-    this.setState({ favoriteBeast: this.state.rawData[index], displayModal: true });
+    this.setState({ indexofSelectedBeast: index, favoriteBeast: this.state.rawData[index], displayModal: true });
   }
 
   handleClose = () => {

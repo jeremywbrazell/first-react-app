@@ -36,3 +36,15 @@ Start time: 6:00 PM PST
 Finish time: 7:00 PM PST
 
 Actual time needed to complete: 1 Hour
+
+---------------------------------------------------
+
+Number and name of feature: Feature #1: Display a Modal
+
+Estimate of time needed to complete: 1.5 hours
+
+Start time: 5:00 PM PST
+
+Finish time: _____
+
+Actual time needed to complete: _____

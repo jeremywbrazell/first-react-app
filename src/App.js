@@ -5,6 +5,7 @@ import Main from './main';
 import './App.css';
 import Data from './beastData.json';
 import SelectedBeast from './SelectedBeast.js';
+import FormInfo from './forminfo';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
       <div className="App">
         <header>
           <Header />
+          <FormInfo />
           <Main 
             cards={this.state.rawData}
             showModal={this.showModal}

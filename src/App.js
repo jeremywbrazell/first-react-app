@@ -5,43 +5,52 @@ import Main from './main';
 import './App.css';
 import Data from './beastData.json';
 import SelectedBeast from './SelectedBeast.js';
-import FormInfo from './forminfo';
+import Dropdown from './forminfo';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       rawData: Data,
-      indexofSelectedBeast: -1,
+      filteredData: Data,
+      // indexofSelectedBeast: -1,
       displayModal: false,
       favoriteBeast: {}
-    }
+    };
   }
 
   showModal = (index) => {
-    this.setState({ indexofSelectedBeast: index, favoriteBeast: this.state.rawData[index], displayModal: true });
+    this.setState({ indexofSelectedBeast: this.state.rawData[index], displayModal: true });
   }
 
-  handleClose = () => {
-    this.setState({ displayModal: false});
-  }
+  handleInput = (e) => {this.setState({ filteredData: this.state.rawData.filter(value => {
+    if (e === 'all') {
+      return value;
+    } else {
+      return value.horns === Number(e);}
+    })
+    });
+  };
+
   render() {
     return (
-      <div className="App">
-        <header>
+      <>
           <Header />
-          <FormInfo />
+          <Dropdown
+          handleInput={this.handleInput}
+          ></Dropdown>
           <Main 
-            cards={this.state.rawData}
             showModal={this.showModal}
+            cards={(this.state.filteredData) !== null ? (this.state.filteredData) : (this.state.rawData)} 
           />
           <SelectedBeast
             show={this.state.displayModal}
-            handleClose={this.handleClose}
-            favoriteBeast={this.state.favoriteBeast} />
+            handleClose={() => this.setState({displayModal:false})}
+            favoriteBeast={this.state.favoriteBeast} 
+            this={this.state.title}
+            />
           <Footer />
-        </header>
-      </div>
+      </>
     );
   }
 }

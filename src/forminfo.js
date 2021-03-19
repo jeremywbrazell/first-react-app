@@ -1,23 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 
-class FormInfo extends React.Component{
-  render () {
-    return(
-      <Form>
-        <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>How Many Horns Do You Prefer?</Form.Label>
-          <Form.Control as="select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Form.Control>
-        </Form.Group>
-      </Form>
+class FormInfo extends React.Component {
+  
+  render() {
+    return (
+      <Dropdown onSelect={this.props.handleSubmit}>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Dropdown Button
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="#/action-1" eventKey="all" as="button" onClick={this.props.handleInput}>All</Dropdown.Item>
+          <Dropdown.Item href="#/action-1" eventKey="1" as="button" onClick={this.props.handleInput}>1</Dropdown.Item>
+          <Dropdown.Item href="#/action-1" eventKey="2" as="button" onClick={this.props.handleInput}>2</Dropdown.Item>
+          <Dropdown.Item href="#/action-1" eventKey="3" as="button" onClick={this.props.handleInput}>3</Dropdown.Item>
+          <Dropdown.Item href="#/action-1" eventKey="100" as="button" onClick={this.props.handleInput}>100</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     )
   }
 }
